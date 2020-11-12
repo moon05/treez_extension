@@ -1,6 +1,17 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "treez extension",
+  "name": "Treez Chrome Extension",
+  "description": "A Chrome Extension to learn about Plants!",
+  "version": "0.0.1",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permission": {
+    "tabs"
+  },
+  "browser_action": {
+    "default_icon": "logo192.png"
+  },
   "icons": [
     {
       "src": "favicon.ico",
