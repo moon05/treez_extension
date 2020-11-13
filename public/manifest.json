@@ -19,8 +19,7 @@
   },
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "background_color": "#02C39A",
 
   "content_security_policy": "script-src 'self' 'sha256-cmAUcbJFV5GL18YyLo89jdcFE5INVFl6EpF5cqoC/GU='; object-src 'sefl'"
 
