@@ -35,42 +35,13 @@ function Description({
     setEntered(true);
   }, []);
 
-  const [native_places, setNativePlaces] = useState("");
-  const [fam_com, setFamCom] = useState("");
-  const [ann, setAnn] = useState("");
-  const [main_com_name, setMainComName] = useState("");
-  const [com_names, setComNames] = useState("");
-  const [sci_name, setSciName] = useState("");
-  const [auth_name, setAuthName] = useState("");
   useEffect(() => {
-      console.log("Inside Useeffect");
+      console.log("Inside Useeffect in Description");
       console.log(common_name, common_names, fam_common_name, scientific_name, author, ann_per, native_to, max_height)
-    if (native_to !== undefined) {
-      setNativePlaces(native_to.join(", ").toLowerCase());
-    }
-    if (fam_common_name !== undefined) {
-        setFamCom(fam_common_name.toLowerCase());
-      }
-      if (ann_per !== undefined) {
-        console.log(ann_per[0].toLowerCase())
-        setAnn(ann_per[0].toLowerCase());
-      }
-      if (common_name !== undefined) {
-        setMainComName(common_name.toLowerCase());
-      }
-      if (common_names !== undefined) {
-        setComNames(common_names[0].toLowerCase());
-      }
-      if (scientific_name !== undefined) {
-        setSciName(scientific_name.toLowerCase());
-      }
-      if (author !== undefined) {
-        setAuthName(author.toLowerCase());
-      }
-
   }, [entered]);
 
 
+  
   return (
     <Grid
       container
@@ -89,49 +60,51 @@ function Description({
       >
         <Grid item xs={7}>
           <Typography className={classes.spFont} variant="h5">
-            {main_com_name}
+            {common_name}
           </Typography>
           <Divider variant="fullWidth" />
         </Grid>
         <Divider variant="middle" />
         <Grid item xs={7}>
           <Typography className={classes.spFont}>
-            also known as <span style={{fontWeight: "bold"}}>{com_names}</span>
+            also known as: <span style={{fontWeight: "bold"}}>{common_names}</span>
           </Typography>
         </Grid>
         <Grid item container xs={7} justify="flex-start">
           <Typography className={classes.spFont}>
-            can be found in {native_places}
+            can be found in: {native_to}
           </Typography>
         </Grid>
         <Grid item xs={7}>
           <Typography className={classes.spFont}>
-            {ann}
+            duration: {ann_per}
           </Typography>
         </Grid>
+
         <Grid item xs={7}>
           <Typography className={classes.spFont}>
-            under {fam_com}
+            under: {fam_common_name}
           </Typography>
         </Grid>
         <Grid item xs={7}>
           <Typography className={classes.spFont} style={{fontStyle: "italic"}}>
-            {sci_name}
+            scientific name: {scientific_name}
           </Typography>
         </Grid>
         <Grid item xs={7}>
           <Typography className={classes.spFont}>
-            grows up to {max_height} cm or {(max_height*1.0)/30.48} ft
+            grows up to: {Math.round((((max_height*1.0)/30.48)+Number.EPSILON)*100)/100} ft ({max_height} cm )
           </Typography>
         </Grid>
         <Grid item xs={7}>
           <Typography className={classes.spFont}>
-            discovered by {auth_name} on {year}
+            discovered by: {author} on {year}
           </Typography>
         </Grid>
       </Grid>
     </Grid>
   );
 }
+
 
 export default Description;

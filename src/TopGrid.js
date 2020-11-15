@@ -4,7 +4,7 @@ import React from "react";
 import "./App.css";
 const useStyles = makeStyles((theme) => ({
   topGrid: {
-    marginTop: 50,
+    marginTop: 36,
   },
 }));
 
@@ -21,7 +21,6 @@ function TopGrid() {
       alignItems="center"
       className={classes.topGrid}
     >
-      Top Header Grid
     </Grid>
   );
 }

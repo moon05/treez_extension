@@ -1,25 +1,22 @@
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
 import TopGrid from "./TopGrid";
 import MidGrid from "./MidGrid"
 import Footer from "./Footer";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#F0F3BD"
   },
 
 }));
 
-function Main() {
+function Main({isFeedbackFormOpen}) {
   const classes = useStyles();
+  
 
-  const [entered, setEntered] = useState(false);
-  useEffect(() => {
-    setEntered(true);
-  }, []);
 
   return (
     <Grid
@@ -29,7 +26,8 @@ function Main() {
     >
       <TopGrid />
       <MidGrid />
-      <Footer />
+      
+      <Footer isFeedbackFormOpen={isFeedbackFormOpen}/>
     </Grid>
   );
 }

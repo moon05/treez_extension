@@ -1,23 +1,26 @@
 
 import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import Main from "./Main"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
 		flexGrow: 1,
-		backgroundColor: "#02C39A"
+		backgroundColor: "#ffffff",
+		overflow: "hidden",
   },
 }));
 
 function App() {
-  const classes = useStyles();
+	const classes = useStyles()
 
   return (
-    <div className={classes.root}>
-      <Main />
-    </div>
+
+   <div className={classes.root}>
+      <Main/>
+		</div>
   );
 }
 

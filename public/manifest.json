@@ -7,22 +7,17 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permission": [
+  "permissions": [
     "tabs"
   ],
   "browser_action": {
     "default_icon": "logo192.png"
   },
   "icons": {
-    "198":"logo192.png",
-    "512": "logo512.png"
+    "198": "logo192.png",
+    "512":"logo512.png"
   },
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#02C39A",
 
-  "content_security_policy": "script-src 'self' 'sha256-cmAUcbJFV5GL18YyLo89jdcFE5INVFl6EpF5cqoC/GU='; object-src 'sefl'"
-
-
+  "content_security_policy": "script-src 'self' 'sha256-hiBjC6pPKBmwN4RLhjM+a8jLQM7dtP5KB8j0v4ufE2Y='; object-src 'self'"
 
 }
