@@ -1,9 +1,12 @@
-import { Divider, Grid } from "@material-ui/core";
+import { Divider, Grid, Typography } from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import MiniDetail from "./MiniDetail";
 import MiniDetailNumber from "./MiniDetailNumber";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+</style>
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,18 +17,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     paddingBottom: 2,
-    backgroundColor: "green",
+    backgroundColor: "#2d4638",
     borderRadius: 3,
+    fontFamily: "'Open Sans', sans-serif",
   },
   detailHolder: {
-    backgroundColor: "inherit",
-    width: 560,
+    width: 525,
   },
 
   circleDimensions: {
     height: 400,
     width: 400,
-    border: "8px solid white",
+    border: "6px solid white",
     // all in positive
     // first: moves down, second: right margin increases
     // third: moves up: left margin increases
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   divider: {
-    height: 5,
+    height: 4,
     backgroundColor: "white",
     position: "relative",
     right: "6%",
@@ -105,7 +108,7 @@ function CustomCard({
         <MiniDetail constantText={"Under"} resValue={fam_common_name} />
         <MiniDetail
           constantText={"Scientific Name"}
-          resValue={scientific_name}
+          resValue={<Typography style={{fontStyle:"italic"}}>{scientific_name}</Typography>}
         />
         <MiniDetailNumber
           constantText={"Grows up to"}

@@ -1,13 +1,19 @@
+/*global chrome*/
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
+import CachedIcon from '@material-ui/icons/Cached';
 import "./App.css";
 import CustomCard from "./CustomCard";
+import {getSlugsFromSessionStorage} from "./helpers";
 const useStyles = makeStyles((theme) => ({
   midGrid: {
     marginTop: 40,
   },
+  refreshButton: {
+    borderRadius: 400
+  }
 }));
 
 function MidGrid() {
@@ -32,8 +38,6 @@ function MidGrid() {
         setImage_URL(data.image_url);
         
 
-        
-
         console.log(randomPlantData.distribution, "Printing sorted distrib array");
         const firstCommonName = data.common_names[0]
           .toLowerCase()
@@ -47,10 +51,22 @@ function MidGrid() {
           setCName(data.common_names[1]);
         }
 
+        
+
         console.log(data.duration, "Ann_per");
 
         console.log("new image url: ", data.image_url);
         console.log("set image url to:", image_URL);
+
+        console.log("Session Storage Stuff")
+
+        var slugArr = getSlugsFromSessionStorage()
+
+        
+        // popSlugFromSessionStorage();
+        console.log(slugArr[0]);
+        console.log(slugArr[0], ", data");
+
       })
       .catch((e) => console.log(e, "Error"));
   }, [entered]);
@@ -167,7 +183,7 @@ function MidGrid() {
             alignItems="center"
             style={{ marginTop: 15 }}
           >
-            <Button onClick={handleAnotherOne}> Try Another One!</Button>
+            <Button onClick={handleAnotherOne} className={classes.refreshButton} size="large"> <CachedIcon/></Button>
           </Grid>
         </Grid>
       </Grid>
