@@ -130,7 +130,7 @@ function CustomCard({
         <MiniDetail
           constantText={"Scientific Name"}
           resValue={
-            <Typography style={{ fontStyle: "italic", fontWeight: "bold" }}>
+            <Typography style={{ fontStyle: "italic", fontWeight: "bold", fontSize: "1.12em"}}>
               {scientific_name}
             </Typography>
           }

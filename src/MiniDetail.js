@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
       textTransform: "capitalize",
       fontWeight: "bold",
       color: "white",
-      lineHeight: 1.7
+      lineHeight: 1.7,
+      fontSize: "1.12em"
   }
 }));
 

@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontWeight: "bold",
     color: "white",
-    lineHeight: 1.7
-
+    lineHeight: 1.7,
+    fontSize: "1.12em"
 
 }
 }));
