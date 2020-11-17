@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import "./App.css";
 import TopGrid from "./TopGrid";
-import MidGrid from "./MidGrid"
+import NewMidGrid from "./NewMidGrid"
 import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +25,7 @@ function Main({isFeedbackFormOpen}) {
       className={classes.root}
     >
       <TopGrid />
-      <MidGrid />
+      <NewMidGrid />
       
       <Footer isFeedbackFormOpen={isFeedbackFormOpen}/>
     </Grid>
