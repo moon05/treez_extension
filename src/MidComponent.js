@@ -6,36 +6,26 @@ import CustomCard from "./CustomCard";
 import React from "react";
 import "./App.css";
 const useStyles = makeStyles((theme) => ({
-  topGrid: {
-    marginTop: 36,
-  },
+
 }));
 
-function TempMidComp({
-  firstSlug,
+function MidComponent({
   setFirstSlug,
-  c_name,
   randomPlantData,
   image_URL,
 }) {
   const classes = useStyles();
-
   function handleAnotherOne(e) {
-    console.log("Gotten inside Try Another");
-
     fetch(`http://167.99.150.45:3035/getTreeSlug`)
       .then((res) => res.json())
       .then((data) => {
         if (data === undefined) {
-          console.log("OOPS Got Nothing From Fetching");
           //In case fetching slug fails
           setFirstSlug("juniperus-communis-var-communis");
         } else {
-          console.log(data.slug);
           setFirstSlug(data.slug);
         }
       });
-
   }
 
   return (
@@ -59,9 +49,14 @@ function TempMidComp({
             ? randomPlantData.common_name.toLowerCase()
             : undefined
         }
-        common_names={randomPlantData.common_names ? randomPlantData.common_names[0].toLowerCase() : undefined}
+        //interesting way to check if array is empty!
+        common_names={
+          randomPlantData.common_names?.length
+            ? randomPlantData.common_names[0].toLowerCase()
+            : undefined
+        }
         native_to={
-          randomPlantData.distribution
+          randomPlantData.distribution?.length
             ? randomPlantData.distribution.slice(0, 6).join(", ").toLowerCase()
             : undefined
         }
@@ -106,4 +101,4 @@ function TempMidComp({
   );
 }
 
-export default TempMidComp;
+export default MidComponent;

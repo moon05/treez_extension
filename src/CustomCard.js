@@ -36,11 +36,21 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 14px 0 10px",
   },
 
-  divider: {
+  dividerBig: {
     height: 4,
     backgroundColor: "white",
     position: "relative",
-    right: "4.2%",
+    right: "4.8%",
+    width: 535,
+    borderRadius: 4,
+    marginTop: -30,
+  },
+
+  dividerSmall: {
+    height: 4,
+    backgroundColor: "white",
+    position: "relative",
+    right: "4%",
     width: 535,
     borderRadius: 4,
     marginTop: -30,
@@ -70,7 +80,6 @@ function CustomCard({
 }) {
   const classes = useStyles();
 
-  console.log(ann_per);
   return (
     <Grid className={classes.root}>
       <div className={classes.outerCircle}>
@@ -80,7 +89,7 @@ function CustomCard({
           alt="plant_image"
           className={classes.circleDimensions}
         >
-          P
+          {imageURL ? "P" : "Sorry currently this image is unavailable!"}
         </Avatar>
       </div>
 
@@ -103,7 +112,7 @@ function CustomCard({
           <h2>{common_name}</h2>
         </Grid>
         <Grid item container xs={12} alignItems="center">
-          <Divider className={classes.divider} />
+          <Divider className={ (common_names && fam_common_name && ann_per) ? classes.dividerBig : classes.dividerSmall} />
         </Grid>
         {common_names ? (
           <MiniDetail constantText={"Also known as"} resValue={common_names} />
