@@ -6,7 +6,7 @@ Treez is a Chrome extension that replaces the new tab screen with a picture of a
 
 ## Install
 
-Install Treez from Chrome Web Store
+Install Treez from [Chrome Web Store](https://chrome.google.com/webstore/detail/treez/jekkbdjgllmdaaeblobaenhnflpldaod?hl=en-US)
 
 ## Feedback
 
