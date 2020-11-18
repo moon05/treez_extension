@@ -1,9 +1,8 @@
 # What is Treez Extension 
 
 Treez is a Chrome extension that replaces the new tab screen with a picture of a plant and some relevant details of it as bite-sized information. Every new tab displays a different plant, along with the ability to refresh inside the same tab to see different plants.<br>
-![Western Brackenfern] (/images/western_brackenfern.png "Western Brackenfern") <br>
-![European Ash] (./images/european_ash.png?raw=true "European Ash") <br>
-![Common Juniper] (./images/common_juniper.png?raw=true "Common Juniper") <br>
+<img src="https://raw.githubusercontent.com/moon05/treez_extension/master/images/western_brackenfern.png" alt="Western Brackenfern" title="Western Brackenfern"/> <br>
+<img src="https://raw.githubusercontent.com/moon05/treez_extension/master//images/european_ash.png" alt="European Ash" title="European Ash"/><br>
 
 ## Install
 
