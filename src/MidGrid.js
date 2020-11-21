@@ -43,9 +43,8 @@ function NewMidGrid() {
           setFirstSlug(data.slug);
         }
       });
-      setTimeout(function(){}, 1000);
 
-  }, [entered]);
+  }, []);
 
   useEffect(() => {
 
@@ -56,10 +55,10 @@ function NewMidGrid() {
       .then((data) => {
         if (data !== undefined) {
           setRandomPlantData(data);
+          setImage_URL(data.image_url);
           setIsLoading(false);
         }
-        setImage_URL(data.image_url);
-
+        
       })
       .catch((e) => {
         //not printing error atm
