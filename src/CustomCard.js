@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   circleDimensions: {
     height: 420,
     width: 420,
+    backgroundColor: "white",
     border: "7px solid white",
     // all in positive
     // first: moves down, second: right margin increases
