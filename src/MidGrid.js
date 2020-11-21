@@ -76,7 +76,6 @@ function NewMidGrid() {
       direction="row"
       justify="center"
       alignItems="center"
-      className={classes.midGrid}
     >
       {isLoading ? (
         <CircularProgress />

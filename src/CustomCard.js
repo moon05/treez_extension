@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     height: 420,
     width: 420,
     backgroundColor: "white",
-    border: "7px solid white",
+    border: "8px solid white",
     // all in positive
     // first: moves down, second: right margin increases
     // third: moves up: left margin increases
@@ -38,20 +38,20 @@ const useStyles = makeStyles((theme) => ({
   },
 
   dividerBig: {
-    height: 4,
+    height: 4.1,
     backgroundColor: "white",
     position: "relative",
-    right: "4.8%",
-    width: 535,
+    right: "5.8%",
+    width: 538,
     borderRadius: 4,
     marginTop: -30,
   },
 
   dividerSmall: {
-    height: 4,
+    height: 4.1,
     backgroundColor: "white",
     position: "relative",
-    right: "4%",
+    right: "4.8%",
     width: 535,
     borderRadius: 4,
     marginTop: -30,
@@ -113,7 +113,7 @@ function CustomCard({
           <h2>{common_name}</h2>
         </Grid>
         <Grid item container xs={12} alignItems="center">
-          <Divider className={ (common_names && fam_common_name && ann_per) ? classes.dividerBig : classes.dividerSmall} />
+          <Divider className={ (fam_common_name && max_height) ? classes.dividerBig : classes.dividerSmall} />
         </Grid>
         {common_names ? (
           <MiniDetail constantText={"Also known as"} resValue={common_names} />

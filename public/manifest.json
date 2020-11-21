@@ -1,15 +1,14 @@
 { 
   "manifest_version": 2,
   "short_name": "treez extension",
-  "name": "Treez: Know about various trees when you open a new tab!",
-  "description": "A Chrome Extension to learn about Plants!",
-  "version": "0.0.2",
+  "name": "Treez",
+  "description": "Learn about plants while you are browsing away!",
+  "version": "0.0.4",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
 
   "permissions": [
-    "storage",
     "tabs"
   ],
   
@@ -19,8 +18,6 @@
     "48": "logo48.png",
     "128": "logo128.png",
     "256": "logo256.png"
-  },
-
-  "content_security_policy": "script-src 'self' 'sha256-Poy/v0pdc4TJ7q5Hmcp2xHXrJo2FxEYrBAJDv15CgSA='; object-src 'self'"
+  }
 
 }

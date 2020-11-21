@@ -10,16 +10,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+
 }));
 
 function Main({ isFeedbackFormOpen }) {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} className={classes.root}>
-      <TopGrid />
+    <Grid container>
       <MidGrid />
-      <Footer />
     </Grid>
   );
 }

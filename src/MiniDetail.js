@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "bold",
       color: "white",
       lineHeight: 1.7,
-      fontSize: "1.12em"
+      fontSize: "1.10em"
   }
 }));
 
@@ -21,13 +21,13 @@ function MiniDetail({ constantText, resValue}) {
   return (
 
     <Grid item container xs={12} className={classes.text}>
-      <Grid item container xs={3} justify="flex-start">
+      <Grid item container xs={4} justify="flex-start">
         {constantText}
       </Grid>
-      <Grid item container xs={1} justify="flex-start" style={{marginLeft:5}}>
+      <Grid item container xs={1} justify="flex-start" style={{marginLeft:-20}}>
         :
       </Grid>
-      <Grid item container xs={8} justify="flex-start" style={{marginLeft:-25}}>
+      <Grid item container xs={7} justify="flex-start" style={{marginLeft:-25}}>
         {resValue}
       </Grid>
     </Grid>
