@@ -8,9 +8,6 @@
     "newtab": "index.html"
   },
 
-  "permissions": [
-    "tabs"
-  ],
   
   "icons": {
     "16": "logo16.png",
